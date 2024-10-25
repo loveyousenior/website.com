@@ -1,0 +1,508 @@
+<html><head><base href=" ">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SOHEL CLICKER - Professional Photography</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<style>
+:root {
+    --dark-gray: #1a1a1a;
+    --off-white: #f5f5f5;
+    --orange: #37afd4;
+    --black: #000000;
+    --logo-color: #000000;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--dark-gray);
+  color: var(--off-white);
+}
+
+/* --------------------------------------------------------Navigation --------------------------------------------------- */
+.navbar {
+  position: fixed;
+  width: 100%;
+  padding: 20px 0;
+  z-index: 999;
+  transition: 0.3s;
+}
+
+.navbar.sticky {
+  background: rgba(44, 44, 44, 0.9);
+  padding: 15px 0;
+  backdrop-filter: blur(10px);
+}
+
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  font-size: 24px;
+  color: var(--dark-gray);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: var(--off-white);
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--orange);
+}
+
+/* -----------------------------------Home Section --------------------------------------*/
+
+#home {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://i.ibb.co.com/VSqDKC9/Cover-2.jpg") center/cover;
+}
+
+.home-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.home-text {
+  position: absolute;
+  bottom: 100px;
+  left: 50px;
+}
+
+.home-text h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: var(--orange);
+}
+
+.home-text p {
+  font-size: 20px;
+  opacity: 0.9;
+}
+
+/*-------------------------------------------------------------------- Portfolio Section ----------------------------------------*/
+
+
+#portfolio {
+  padding: 80px 20px;
+}
+
+.portfolio-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.portfolio-filters {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.filter-btn {
+  background: none;
+  border: none;
+  color: var(--off-white);
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 20px;
+  transition: 0.3s;
+}
+
+.filter-btn.active {
+  color: var(--orange);
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.1);
+}
+
+/* About Section */
+#about {
+  padding: 100px 0;
+  background: var(--black);
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.about-content h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: var(--orange);
+}
+
+.about-content p{
+  font-size: 20px;
+}
+
+/* ---------------------------------------------------Contact Section -----------------------------------------*/
+
+
+#contact {
+  padding: 100px 0;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.contact-info h2 {
+  font-size: 80px;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  color: var(--orange);
+}
+
+
+.contact-info a {
+  display:block;
+  color: var(--off-white);
+  font-size: 20px;
+  transition: 0.3s;
+  text-decoration: none;
+  margin-bottom: 20px;
+
+  
+}
+
+.contact-info a span {
+  padding-left: 7px;
+}
+
+.contact-info a:hover {
+  color: var(--orange);
+  text-decoration: none;
+}
+
+
+.social-links {
+  display: flex;
+  gap: 22px;
+  margin-top: 60px;
+}
+
+
+
+.social-links a {
+  color: var(--off-white);
+  font-size: 24px;
+  transition: 0.3s;
+
+}
+
+
+.social-links a:hover {
+  color: var(--orange);
+}
+
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 15px;
+  background: rgba(255,255,255,0.1);
+  border: none;
+  border-radius: 5px;
+  color: var(--off-white);
+}
+
+.contact-form button {
+  padding: 15px 30px;
+  background: var(--orange);
+  border: none;
+  border-radius: 5px;
+  color: var(--off-white);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #ff8533;
+}
+
+/* Scroll Up Button */
+.scroll-up {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 40px;
+  height: 40px;
+  background: var(--orange);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--off-white);
+  cursor: pointer;
+  transition: 0.3s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.scroll-up.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (max-width: 768px) {
+  .about-container,
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .home-text {
+    left: 20px;
+    bottom: 50px;
+  }
+  
+  .home-text h1 {
+    font-size: 36px;
+  }
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container">
+    <a href="#" class="logo">SOHEL CLICKER</a>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<section id="home">
+  <div class="home-content">
+    <div class="home-text" data-aos="fade-up">
+     <div>
+      <p>“When people ask me what equipment I use – I tell them my eyes.”</p>
+      <h1>Hello, I'M SOHEL</h1>
+     </div>
+    </div>
+  </div>
+</section>
+
+<section id="portfolio">
+  <div class="portfolio-container">
+    <div class="portfolio-filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="wedding">Wedding</button>
+      <button class="filter-btn" data-filter="portrait">Portrait</button>
+      <button class="filter-btn" data-filter="street">Street</button>
+    </div>
+    
+    <div class="portfolio-grid">
+      <!-- Portfolio items will be dynamically added via JavaScript -->
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="about-container">
+    <div class="about-image" data-aos="fade-right">
+      <a href="https://ibb.co.com/QPhR0Ym"><img src="https://i.ibb.co.com/N9fPRWY/sohel-photo.jpg" alt="sohel-photo" border="0"></a>
+    </div>
+    <div class="about-content" data-aos="fade-left">
+      <h2>About Me</h2>
+      <p style="font: size 26px; ;">I am <span style="text-transform: capitalize;">Sohel Mahamud Hridoy</span>, a professional wedding and event photographer based in Bangladesh. With a keen eye for detail and a passion for capturing authentic moments, I specialize in creating timeless memories through my lens.
+        <br><br>
+        My journey in photography began with a simple love for storytelling through images. Today, I work with clients across Bangladesh, documenting their special moments with creativity and dedication.
+        <br><br>
+        Whether it's a grand wedding celebration, an intimate portrait session, or the raw beauty of street photography, I bring my unique perspective and technical expertise to every shoot.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact-container">
+    <div class="contact-info" data-aos="fade-right">
+      <h2>Let's work together</h2>
+      
+        <a href="tel:+8801862216351"><i class="fas fa-phone"></i><span> +8801862-216351</span></a>
+        <a href="mailto:sohelclicker@gmail.com"><i class="far fa-envelope"></i> <span>sohelclicker@gmail.com</span></a>
+      
+
+      
+      <div class="social-links">
+        <h4 style="font-size: 24px; font-weight: lighter;" >Get in touch</h4>
+        <a href="https://www.facebook.com/sohelclicker" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/sohelclicker/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/sohelclicker/" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.pinterest.com/sohelclicker/" target="_blank"><i class="fab fa-pinterest"></i></a>
+      </div>
+    </div>
+    
+    <div class="contact-form" data-aos="fade-left">
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <input type="tel" placeholder="Your Phone">
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<div class="scroll-up">
+  <i class="fas fa-arrow-up"></i>
+</div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init({
+  duration: 1000,
+  once: true
+});
+
+// Navbar Scroll Effect
+window.addEventListener('scroll', function() {
+  const navbar = document.querySelector('.navbar');
+  if (window.scrollY > 50) {
+    navbar.classList.add('sticky');
+  } else {
+    navbar.classList.remove('sticky');
+  }
+});
+
+// Portfolio Filter
+const portfolioItems = [
+  { category: 'wedding', image: 'wedding1.jpg' },
+  { category: 'wedding', image: 'wedding2.jpg' },
+  { category: 'portrait', image: 'portrait1.jpg' },
+  { category: 'portrait', image: 'portrait2.jpg' },
+  { category: 'street', image: 'street1.jpg' },
+  { category: 'street', image: 'street2.jpg' },
+];
+
+function renderPortfolio(filter = 'all') {
+  const grid = document.querySelector('.portfolio-grid');
+  grid.innerHTML = '';
+  
+  portfolioItems
+    .filter(item => filter === 'all' || item.category === filter)
+    .forEach(item => {
+      const div = document.createElement('div');
+      div.className = 'portfolio-item';
+      div.setAttribute('data-aos', 'fade-up');
+      div.innerHTML = `<img src="${item.image}" alt="${item.category} photography">`;
+      grid.appendChild(div);
+    });
+}
+
+renderPortfolio();
+
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelector('.filter-btn.active').classList.remove('active');
+    btn.classList.add('active');
+    renderPortfolio(btn.dataset.filter);
+  });
+});
+
+// Scroll Up Button
+window.addEventListener('scroll', function() {
+  const scrollUp = document.querySelector('.scroll-up');
+  if (window.scrollY > 500) {
+    scrollUp.classList.add('active');
+  } else {
+    scrollUp.classList.remove('active');
+  }
+});
+
+document.querySelector('.scroll-up').addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
+// Form Submission
+document.querySelector('form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  // Add your form submission logic here
+  alert('Thank you for your message. We will get back to you soon!');
+  this.reset();
+});
+</script>
+
+</body></html>
